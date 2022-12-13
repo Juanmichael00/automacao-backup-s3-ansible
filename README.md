@@ -28,12 +28,12 @@ Pronto, agora você tem acesso a máquina de destino logando com o user Ubuntu >
 - 6° Sexto Passo:
 Em upload_backup_s3/templates/user_put_s3 e download_backup_s3/templates/user_get_s3, adicionar os seguintes valores:
 
-access_key =
-secret_key = 
-bucket_location = region
-host_base = s3.amazonaws.com
-host_bucket = nome-bucket.s3.amazonaws.com
-gpg_passphrase = Adicionar uma chave (senha) ou gerar com "openssl rand -base64 30"
+###### access_key =
+###### secret_key = 
+###### bucket_location = region
+###### host_base = s3.amazonaws.com
+###### host_bucket = nome-bucket.s3.amazonaws.com
+###### gpg_passphrase = Adicionar uma chave (senha) ou gerar com "openssl rand -base64 30"
 
 - 7° Sétimo Passo:
 Editar o arquivo hosts do ansible e adicionar o IP Público da máquina que está o backup:
