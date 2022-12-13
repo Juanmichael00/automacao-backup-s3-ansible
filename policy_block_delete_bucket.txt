@@ -1,0 +1,15 @@
+{
+  "Id": "Policy1668107158127",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1668107156222",
+      "Action": [
+        "s3:DeleteBucket"
+      ],
+      "Effect": "Deny",
+      "Resource": "arn:aws:s3:::",
+      "Principal": "*"
+    }
+  ]
+}

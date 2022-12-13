@@ -1,0 +1,18 @@
+---
+- name: Install s3cmd
+  ansible.builtin.apt:
+    name: s3cmd
+    state: present
+
+- name: S3CMD | Configuration
+  template:
+    src: user_s3
+    dest: ~/.s3cfg
+
+- name: S3CMD | Get backup
+  shell: s3cmd get --recursive s3://bucket-name/pasta/ /local-para-enviar
+
+- name: S3CMD | Remove .s3cfg
+  ansible.builtin.file:
+    path: ~/.s3cfg
+    state: absent
